@@ -1,0 +1,89 @@
+{
+    "button": [
+        {
+		"name": "公司主页", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "公司首页", 
+                    "url": "http://www.baidu.com"
+                },
+				{
+                    "type": "view", 
+                    "name": "最新动向", 
+                    "url": "http://www.baidu.com"
+                },
+				{
+                    "type": "view", 
+                    "name": "最新活动", 
+                    "url": "http://www.baidu.com"
+                },
+				{
+                    "type": "view", 
+                    "name": "最新产品", 
+                    "url": "http://www.baidu.com"
+                },
+				{
+                    "type": "view", 
+                    "name": "教育团队", 
+                    "url": "http://www.baidu.com"
+                }
+            ]
+        }, 
+        {
+            "name": "新品上市", 
+            "sub_button": [
+                {
+                    "type": "view", 
+                    "name": "味道系列", 
+                    "url": "http://mp.weixin.qq.com/mp/appmsg/show?__biz=MjM5NzE1NTU0MQ==&appmsgid=10000042&itemidx=1&scene=4#wechat_redirect"
+                },
+				{
+                    "type": "view", 
+                    "name": "风絮系列", 
+                    "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk3NzAzNw==&mid=202188928&idx=2&sn=68ba696aeababa51f8e70c5e47ae8d2e#rd"
+                },
+				{
+                    "type": "view", 
+                    "name": "狄微贝沙色膏", 
+                    "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk3NzAzNw==&mid=202188928&idx=1&sn=d5494505f6e38cb4dca37e249a26ed36#rd"
+                },
+				{
+                    "type": "view", 
+                    "name": "施发秀系列", 
+                    "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk3NzAzNw==&mid=201967230&idx=1&sn=4e1bf820317c846080e033f176a20ed1&scene=4#wechat_redirect"
+                },
+				{
+                    "type": "view", 
+                    "name": "方婷系列", 
+                    "url": "http://mp.weixin.qq.com/s?__biz=MzA3OTk3NzAzNw==&mid=201918173&idx=1&sn=9aadfa44a0688b91d9fa8a796fb3a1ad&scene=4#wechat_redirect"
+                }
+            ]
+        },
+		{
+		    "name": "订单发货", 
+            "sub_button": [
+                {
+                    "type": "click", 
+                    "name": "在线订货", 
+                    "key": "ordercar"
+                }, 
+                {
+                    "type": "click", 
+                    "name": "订单查询", 
+                    "key": "getmain"
+                },
+				{
+                    "type": "click", 
+                    "name": "发货单查询", 
+                    "key": "outone"
+                },
+				{
+                    "type": "view", 
+                    "name": "联系我们", 
+                    "url": "http://www.baidu.com"
+                }
+            ]
+		}
+    ]
+}

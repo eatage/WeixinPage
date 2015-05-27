@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4422D1D9-696E-4180-B734-080A376D0F2E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeixinPage</RootNamespace>
+    <AssemblyName>WeixinPage</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>https://github.com/eatage/WeixinPage.git/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6B2930DC57F03BD9902BF86CB707D1883A460AB0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WeixinPage_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IrisSkin2, Version=2006.3.22.45, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\GetIP.cs" />
+    <Compile Include="Core\INIFile.cs" />
+    <Compile Include="Core\JsonHelper.cs" />
+    <Compile Include="Core\Menu.cs" />
+    <Compile Include="Core\NistDateTime.cs" />
+    <Compile Include="Core\SysVisitor.cs" />
+    <Compile Include="DataContractJsonSerializer.cs" />
+    <Compile Include="Formwork.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formwork.Designer.cs">
+      <DependentUpon>Formwork.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kf_account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kf_account.Designer.cs">
+      <DependentUpon>Kf_account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WeixinPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WeixinPage.Designer.cs">
+      <DependentUpon>WeixinPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formwork.resx">
+      <DependentUpon>Formwork.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kf_account.resx">
+      <DependentUpon>Kf_account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WeixinPage.resx">
+      <DependentUpon>WeixinPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="skin\Calmness.ssk" />
+    <None Include="skin\CalmnessColor1.ssk" />
+    <None Include="skin\CalmnessColor2.ssk" />
+    <None Include="skin\DeepCyan.ssk" />
+    <None Include="skin\DeepGreen.ssk" />
+    <None Include="skin\DeepOrange.ssk" />
+    <None Include="skin\DiamondBlue.ssk" />
+    <None Include="skin\DiamondGreen.ssk" />
+    <None Include="skin\Eighteen.ssk" />
+    <None Include="skin\EighteenColor1.ssk" />
+    <None Include="skin\EighteenColor2.ssk" />
+    <None Include="skin\Emerald.ssk" />
+    <None Include="skin\EmeraldColor1.ssk" />
+    <None Include="skin\EmeraldColor2.ssk" />
+    <None Include="skin\EmeraldColor3.ssk" />
+    <None Include="skin\GlassBrown.ssk" />
+    <None Include="skin\GlassGreen.ssk" />
+    <None Include="skin\GlassOrange.ssk" />
+    <None Include="skin\Longhorn.ssk" />
+    <None Include="skin\MacOS.ssk" />
+    <None Include="skin\Midsummer.ssk" />
+    <None Include="skin\MidsummerColor1.ssk" />
+    <None Include="skin\MidsummerColor2.ssk" />
+    <None Include="skin\MidsummerColor3.ssk" />
+    <None Include="skin\MP10.ssk" />
+    <None Include="skin\MSN.ssk" />
+    <None Include="skin\OneBlue.ssk" />
+    <None Include="skin\OneCyan.ssk" />
+    <None Include="skin\OneGreen.ssk" />
+    <None Include="skin\OneOrange.ssk" />
+    <None Include="skin\Page.ssk" />
+    <None Include="skin\PageColor1.ssk" />
+    <None Include="skin\PageColor2.ssk" />
+    <None Include="skin\RealOne.ssk" />
+    <None Include="skin\Silver.ssk" />
+    <None Include="skin\SilverColor1.ssk" />
+    <None Include="skin\SilverColor2.ssk" />
+    <None Include="skin\SportsBlack.ssk" />
+    <None Include="skin\SportsBlue.ssk" />
+    <None Include="skin\SportsCyan.ssk" />
+    <None Include="skin\SportsGreen.ssk" />
+    <None Include="skin\SportsOrange.ssk" />
+    <None Include="skin\SteelBlack.ssk" />
+    <None Include="skin\SteelBlue.ssk" />
+    <None Include="skin\vista1.ssk" />
+    <None Include="skin\vista1_green.ssk" />
+    <None Include="skin\Vista2_color1.ssk" />
+    <None Include="skin\Vista2_color2.ssk" />
+    <None Include="skin\Vista2_color3.ssk" />
+    <None Include="skin\Vista2_color4.ssk" />
+    <None Include="skin\Vista2_color5.ssk" />
+    <None Include="skin\Vista2_color6.ssk" />
+    <None Include="skin\Vista2_color7.ssk" />
+    <None Include="skin\Warm.ssk" />
+    <None Include="skin\WarmColor1.ssk" />
+    <None Include="skin\WarmColor2.ssk" />
+    <None Include="skin\WarmColor3.ssk" />
+    <None Include="skin\Wave.ssk" />
+    <None Include="skin\WaveColor1.ssk" />
+    <None Include="skin\WaveColor2.ssk" />
+    <None Include="skin\XPBlue.ssk" />
+    <None Include="skin\XPGreen.ssk" />
+    <None Include="skin\XPOrange.ssk" />
+    <None Include="skin\XPSilver.ssk" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DLL\dbclass.dll" />
+    <None Include="DLL\gyfunc.dll" />
+    <None Include="DLL\LitJson.dll" />
+    <None Include="DLL\Newtonsoft.Json.dll" />
+    <Content Include="ico.ico" />
+    <Content Include="Images\accept.png" />
+    <Content Include="Images\decline.png" />
+    <Content Include="Images\hide.png" />
+    <Content Include="Images\ico.ico" />
+    <Content Include="Images\loading.gif" />
+    <None Include="Images\loading.png" />
+    <Content Include="menu.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\loading.gif" />
+    <Content Include="skin\calmness.gif" />
+    <Content Include="skin\calmness_color1.gif" />
+    <Content Include="skin\calmness_color2.gif" />
+    <Content Include="skin\deepcyan.gif" />
+    <Content Include="skin\deepgreen.gif" />
+    <Content Include="skin\deeporange.gif" />
+    <Content Include="skin\diamondblue.gif" />
+    <Content Include="skin\diamondgreen.gif" />
+    <Content Include="skin\eighteen.gif" />
+    <Content Include="skin\eighteen_color1.gif" />
+    <Content Include="skin\eighteen_color2.gif" />
+    <Content Include="skin\emerald.gif" />
+    <Content Include="skin\emerald_color1.gif" />
+    <Content Include="skin\emerald_color2.gif" />
+    <Content Include="skin\emerald_color3.gif" />
+    <Content Include="skin\glassbrown.gif" />
+    <Content Include="skin\glassgreen.gif" />
+    <Content Include="skin\glassorange.gif" />
+    <Content Include="skin\IrisSkin2.dll" />
+    <Content Include="skin\longhorn.gif" />
+    <Content Include="skin\macos.gif" />
+    <Content Include="skin\midsummer.gif" />
+    <Content Include="skin\midsummer_color1.gif" />
+    <Content Include="skin\midsummer_color2.gif" />
+    <Content Include="skin\midsummer_color3.gif" />
+    <Content Include="skin\mp10.gif" />
+    <Content Include="skin\msn.gif" />
+    <Content Include="skin\oneblue.gif" />
+    <Content Include="skin\onecyan.gif" />
+    <Content Include="skin\onegreen.gif" />
+    <Content Include="skin\oneorange.gif" />
+    <Content Include="skin\page.gif" />
+    <Content Include="skin\page_color1.gif" />
+    <Content Include="skin\page_color2.gif" />
+    <Content Include="skin\realone.gif" />
+    <Content Include="skin\silver.gif" />
+    <Content Include="skin\silver_color1.gif" />
+    <Content Include="skin\silver_color2.gif" />
+    <Content Include="skin\sportsblack.gif" />
+    <Content Include="skin\sportsblue.gif" />
+    <Content Include="skin\sportscyan.gif" />
+    <Content Include="skin\sportsgreen.gif" />
+    <Content Include="skin\sportsorange.gif" />
+    <Content Include="skin\steelblack.gif" />
+    <Content Include="skin\steelblue.gif" />
+    <Content Include="skin\vista1.gif" />
+    <Content Include="skin\vista1_green.gif" />
+    <Content Include="skin\vista2_color1.gif" />
+    <Content Include="skin\vista2_color2.gif" />
+    <Content Include="skin\vista2_color3.gif" />
+    <Content Include="skin\vista2_color4.gif" />
+    <Content Include="skin\vista2_color5.gif" />
+    <Content Include="skin\vista2_color6.gif" />
+    <Content Include="skin\vista2_color7.gif" />
+    <Content Include="skin\warm.gif" />
+    <Content Include="skin\warm_color1.gif" />
+    <Content Include="skin\warm_color2.gif" />
+    <Content Include="skin\warm_color3.gif" />
+    <Content Include="skin\wave.gif" />
+    <Content Include="skin\wave_color1.gif" />
+    <Content Include="skin\wave_color2.gif" />
+    <Content Include="skin\xpblue.gif" />
+    <Content Include="skin\xpgreen.gif" />
+    <Content Include="skin\xporange.gif" />
+    <Content Include="skin\xpsilver.gif" />
+    <Content Include="skin\控件.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
